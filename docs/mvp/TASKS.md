@@ -63,19 +63,19 @@ Create a small maintainable Python application foundation without unnecessary ru
 
 ## Tasks
 
-- [ ] Add `pyproject.toml`.
-- [ ] Create `src/igpu_recorder/`.
-- [ ] Create application entry point.
-- [ ] Establish Python version policy.
-- [ ] Add pytest.
-- [ ] Add Ruff.
-- [ ] Add static type checking.
-- [ ] Add minimal structured logging.
-- [ ] Add `.gitignore`.
-- [ ] Add deterministic application version source.
-- [ ] Add `tests/`.
-- [ ] Add Windows-only platform guard.
-- [ ] Add application-level exception boundary.
+- [x] Add `pyproject.toml`.
+- [x] Create `src/igpu_recorder/`.
+- [x] Create application entry point.
+- [x] Establish Python version policy.
+- [x] Add pytest.
+- [x] Add Ruff.
+- [x] Add static type checking.
+- [x] Add minimal structured logging.
+- [x] Add `.gitignore`.
+- [x] Add deterministic application version source.
+- [x] Add `tests/`.
+- [x] Add Windows-only platform guard.
+- [x] Add application-level exception boundary.
 
 ## Preferred development tooling
 
@@ -89,11 +89,11 @@ Runtime dependencies should remain intentionally small.
 
 ## Exit criteria
 
-- [ ] Application entry point runs.
-- [ ] Tests run.
-- [ ] Lint passes.
-- [ ] Type checks pass.
-- [ ] Unsupported platforms fail clearly.
+- [x] Application entry point runs.
+- [x] Tests run.
+- [x] Lint passes.
+- [x] Type checks pass.
+- [x] Unsupported platforms fail clearly.
 
 # Phase 2 — FFmpeg Capability Layer
 
