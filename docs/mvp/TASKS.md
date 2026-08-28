@@ -14,44 +14,44 @@ Prove that the reference machine can record through a native/hardware path befor
 
 ## Tasks
 
-- [ ] Record Windows version.
-- [ ] Record CPU model.
-- [ ] Record iGPU/GPU model.
-- [ ] Record graphics driver version.
-- [ ] Select a known FFmpeg development build.
-- [ ] Confirm `ffmpeg` works.
-- [ ] Confirm `ffprobe` works.
-- [ ] Confirm `ddagrab` exists in the FFmpeg build.
-- [ ] Enumerate available H.264 hardware encoders.
-- [ ] Detect Intel QSV availability.
-- [ ] Detect AMD AMF availability.
-- [ ] Prove full-primary-display capture.
-- [ ] Prove mouse cursor capture.
-- [ ] Prove 720p30 recording.
-- [ ] Prove 720p60 recording.
-- [ ] Prove 1080p30 recording.
-- [ ] Prove 1080p60 recording.
-- [ ] Verify hardware Video Encode usage in Windows Task Manager.
-- [ ] Measure FFmpeg CPU utilization.
-- [ ] Measure GPU utilization.
-- [ ] Measure recording smoothness.
-- [ ] Verify generated MP4 with `ffprobe`.
-- [ ] Test hardware scaling from native resolution to 720p.
-- [ ] Test hardware scaling from native resolution to 1080p.
-- [ ] Determine the best pixel-format conversion path.
-- [ ] Determine encoder quality settings from measurements.
-- [ ] Document the winning FFmpeg graph.
-- [ ] Test graceful process termination.
-- [ ] Confirm finalized MP4 is playable and seekable.
+- [x] Record Windows version.
+- [x] Record CPU model.
+- [x] Record iGPU/GPU model.
+- [x] Record graphics driver version.
+- [x] Select a known FFmpeg development build.
+- [x] Confirm `ffmpeg` works.
+- [x] Confirm `ffprobe` works.
+- [x] Confirm `ddagrab` exists in the FFmpeg build.
+- [x] Enumerate available H.264 hardware encoders.
+- [x] Detect Intel QSV availability.
+- [x] Detect AMD AMF availability.
+- [x] Prove full-primary-display capture.
+- [x] Prove mouse cursor capture.
+- [x] Prove 720p30 recording.
+- [x] Prove 720p60 recording.
+- [x] Prove 1080p30 recording.
+- [x] Prove 1080p60 recording.
+- [x] Verify hardware Video Encode usage in Windows Task Manager.
+- [x] Measure FFmpeg CPU utilization.
+- [x] Measure GPU utilization.
+- [x] Measure recording smoothness.
+- [x] Verify generated MP4 with `ffprobe`.
+- [x] Test hardware scaling from native resolution to 720p.
+- [x] Test hardware scaling from native resolution to 1080p.
+- [x] Determine the best pixel-format conversion path.
+- [x] Determine encoder quality settings from measurements.
+- [x] Document the winning FFmpeg graph.
+- [x] Test graceful process termination.
+- [x] Confirm finalized MP4 is playable and seekable.
 
 ## Exit criteria
 
-- [ ] One reproducible FFmpeg recording path exists.
-- [ ] It uses Desktop Duplication instead of Python full-rate frame capture.
-- [ ] Hardware video encoding is confirmed.
-- [ ] Reference machine records 1080p60 for 10 minutes successfully.
-- [ ] Resulting MP4 is valid.
-- [ ] No full-rate raw frames pass through Python.
+- [x] One reproducible FFmpeg recording path exists.
+- [x] It uses Desktop Duplication instead of Python full-rate frame capture.
+- [x] Hardware video encoding is confirmed.
+- [x] Reference machine records 1080p60 for 10 minutes successfully.
+- [x] Resulting MP4 is valid.
+- [x] No full-rate raw frames pass through Python.
 
 Do not proceed to feature implementation until this phase passes or clearly identifies a hardware limitation.
 
