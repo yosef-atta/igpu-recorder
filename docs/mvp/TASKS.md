@@ -103,28 +103,28 @@ Turn the Phase 0 experiment into a deterministic application capability probe.
 
 ## Tasks
 
-- [ ] Implement FFmpeg executable discovery.
-- [ ] Implement ffprobe executable discovery.
-- [ ] Read FFmpeg version.
-- [ ] Detect `ddagrab`.
-- [ ] Detect available hardware H.264 encoders.
-- [ ] Add Intel QSV probe.
-- [ ] Add AMD AMF probe.
-- [ ] Verify encoder initialization instead of trusting encoder-list output alone.
-- [ ] Model hardware backend as a typed abstraction.
-- [ ] Model recording profile: resolution, FPS, backend, output path.
-- [ ] Generate FFmpeg arguments as a list rather than shell-concatenated strings.
-- [ ] Prevent command injection through paths.
-- [ ] Capture FFmpeg stderr for diagnostics.
-- [ ] Add timeout handling for startup probes.
-- [ ] Add unit tests for command construction.
-- [ ] Add unit tests for probe-result parsing.
+- [x] Implement FFmpeg executable discovery.
+- [x] Implement ffprobe executable discovery.
+- [x] Read FFmpeg version.
+- [x] Detect `ddagrab`.
+- [x] Detect available hardware H.264 encoders.
+- [x] Add Intel QSV probe.
+- [x] Add AMD AMF probe.
+- [x] Verify encoder initialization instead of trusting encoder-list output alone.
+- [x] Model hardware backend as a typed abstraction.
+- [x] Model recording profile: resolution, FPS, backend, output path.
+- [x] Generate FFmpeg arguments as a list rather than shell-concatenated strings.
+- [x] Prevent command injection through paths.
+- [x] Capture FFmpeg stderr for diagnostics.
+- [x] Add timeout handling for startup probes.
+- [x] Add unit tests for command construction.
+- [x] Add unit tests for probe-result parsing.
 
 ## Exit criteria
 
-- [ ] App can identify a usable hardware backend.
-- [ ] App rejects unsupported hardware cleanly.
-- [ ] No silent software fallback exists.
+- [x] App can identify a usable hardware backend.
+- [x] App rejects unsupported hardware cleanly.
+- [x] No silent software fallback exists.
 
 # Phase 3 — Recording Process Controller
 
