@@ -232,27 +232,27 @@ Find the cheapest preview implementation that provides enough visual confidence 
 
 ## Tasks
 
-- [ ] Build a minimal full-primary-display preview prototype.
-- [ ] Compare suitable Windows capture approaches.
-- [ ] Evaluate a Desktop Duplication-based Python library such as DXcam.
-- [ ] Measure preview CPU use.
-- [ ] Measure preview GPU use.
-- [ ] Downscale before UI rendering where practical.
-- [ ] Cap idle preview around 10 FPS.
-- [ ] Cap recording preview around 5 FPS.
-- [ ] Suspend preview when the window is minimized.
-- [ ] Restart preview on restore.
-- [ ] Run 1080p60 recording with preview active.
-- [ ] Run 1080p60 recording with preview suspended.
-- [ ] Compare frame stability.
-- [ ] Choose implementation based on measurements.
+- [x] Build a minimal full-primary-display preview prototype.
+- [x] Compare suitable Windows capture approaches.
+- [x] Evaluate a Desktop Duplication-based Python library such as DXcam.
+- [x] Measure preview CPU use.
+- [x] Measure preview GPU use.
+- [x] Downscale before UI rendering where practical.
+- [x] Cap idle preview around 10 FPS.
+- [x] Cap recording preview around 5 FPS.
+- [x] Suspend preview when the window is minimized.
+- [x] Restart preview on restore.
+- [x] Run 1080p60 recording with preview active.
+- [x] Run 1080p60 recording with preview suspended.
+- [x] Compare frame stability.
+- [x] Choose implementation based on measurements.
 
 ## Exit criteria
 
-- [ ] Preview clearly displays the entire primary desktop.
-- [ ] Preview does not become part of the recording data path.
-- [ ] Minimization stops preview workload.
-- [ ] Recording performance remains acceptable.
+- [x] Preview clearly displays the entire primary desktop.
+- [x] Preview does not become part of the recording data path.
+- [x] Minimization stops preview workload.
+- [x] Recording performance remains acceptable.
 
 # Phase 7 — Application State Machine
 
