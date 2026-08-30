@@ -201,28 +201,28 @@ Produce one normal MP4 without re-encoding the completed recording.
 
 ## Tasks
 
-- [ ] Build concat input deterministically.
-- [ ] Escape temporary paths safely.
-- [ ] Concatenate compatible segments using stream copy.
-- [ ] Avoid complete video re-encode.
-- [ ] Handle a session containing only one segment.
-- [ ] Apply MP4 fast-start metadata relocation where appropriate.
-- [ ] Validate final file using ffprobe.
-- [ ] Verify expected resolution.
-- [ ] Verify expected codec.
-- [ ] Verify expected FPS.
-- [ ] Verify non-zero duration.
-- [ ] Handle destination filename collisions.
-- [ ] Never overwrite an existing output silently.
-- [ ] Clean temporary session only after successful validation.
-- [ ] Preserve temporary files when finalization fails.
-- [ ] Return recovery path on failure.
+- [x] Build concat input deterministically.
+- [x] Escape temporary paths safely.
+- [x] Concatenate compatible segments using stream copy.
+- [x] Avoid complete video re-encode.
+- [x] Handle a session containing only one segment.
+- [x] Apply MP4 fast-start metadata relocation where appropriate.
+- [x] Validate final file using ffprobe.
+- [x] Verify expected resolution.
+- [x] Verify expected codec.
+- [x] Verify expected FPS.
+- [x] Verify non-zero duration.
+- [x] Handle destination filename collisions.
+- [x] Never overwrite an existing output silently.
+- [x] Clean temporary session only after successful validation.
+- [x] Preserve temporary files when finalization fails.
+- [x] Return recovery path on failure.
 
 ## Exit criteria
 
-- [ ] CUT/Resume recordings become one MP4.
-- [ ] Finalization performs no full encode pass.
-- [ ] Failed finalization does not destroy source segments.
+- [x] CUT/Resume recordings become one MP4.
+- [x] Finalization performs no full encode pass.
+- [x] Failed finalization does not destroy source segments.
 
 # Phase 6 — Preview Spike
 
