@@ -56,7 +56,9 @@ def test_platform_guard_non_windows() -> None:
 
 def test_entrypoint_success() -> None:
     """Test successful entrypoint execution."""
-    with patch("igpu_recorder.main.assert_windows_platform"):
+    with patch("igpu_recorder.main.assert_windows_platform"), patch(
+        "igpu_recorder.ui.MainWindow.run"
+    ):
         exit_code = entrypoint([])
         assert exit_code == 0
 

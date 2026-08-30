@@ -17,6 +17,7 @@ from typing import Any
 from unittest.mock import MagicMock
 
 import pytest
+
 from igpu_recorder.exceptions import (
     FinalizationError,
     InvalidConfigurationError,
@@ -31,7 +32,6 @@ from igpu_recorder.state_machine import (
     ApplicationState,
     ApplicationStateMachine,
     SettingsState,
-    UIControlsState,
 )
 
 
@@ -49,7 +49,7 @@ def dummy_settings(tmp_path: Path) -> SettingsState:
 
 @pytest.fixture
 def mock_session_factory(tmp_path: Path):
-    def factory(*args: Any, **kwargs: Any) -> MagicMock:
+    def factory(*_: Any, **__: Any) -> MagicMock:
         mock = MagicMock()
         mock.session_id = "session_20260830_123456_deadbeef"
         mock.temp_dir = tmp_path / "session_temp"
@@ -81,7 +81,7 @@ def mock_session_factory(tmp_path: Path):
 
 @pytest.fixture
 def mock_finalizer_factory(tmp_path: Path):
-    def factory(*args: Any, **kwargs: Any) -> MagicMock:
+    def factory(*_: Any, **__: Any) -> MagicMock:
         mock = MagicMock()
         mock.finalize_session.return_value = FinalizationResult(
             output_path=tmp_path / "output" / "iGPU-Recorder_test.mp4",
@@ -332,7 +332,7 @@ class TestErrorHandlingAndRecovery:
         self,
         dummy_settings: SettingsState,
     ) -> None:
-        def failing_session_factory(*args: Any, **kwargs: Any) -> MagicMock:
+        def failing_session_factory(*_: Any, **__: Any) -> MagicMock:
             mock = MagicMock()
             mock.start.side_effect = RecordingProcessError("Failed to launch FFmpeg")
             return mock
@@ -360,7 +360,7 @@ class TestErrorHandlingAndRecovery:
         self,
         dummy_settings: SettingsState,
     ) -> None:
-        def failing_cut_session_factory(*args: Any, **kwargs: Any) -> MagicMock:
+        def failing_cut_session_factory(*_: Any, **__: Any) -> MagicMock:
             mock = MagicMock()
             mock.start.return_value = Path("segment_000.mp4")
             mock.cut.side_effect = RecordingProcessError("Segment corrupted")
@@ -391,7 +391,7 @@ class TestErrorHandlingAndRecovery:
         dummy_settings: SettingsState,
         mock_session_factory: Any,
     ) -> None:
-        def failing_finalizer_factory(*args: Any, **kwargs: Any) -> MagicMock:
+        def failing_finalizer_factory(*_: Any, **__: Any) -> MagicMock:
             mock = MagicMock()
             mock.finalize_session.side_effect = FinalizationError("Stream copy error")
             return mock
