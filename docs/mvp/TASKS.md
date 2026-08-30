@@ -134,23 +134,23 @@ Create a reliable process boundary around FFmpeg.
 
 ## Tasks
 
-- [ ] Implement recorder process start.
-- [ ] Detect immediate FFmpeg startup failure.
-- [ ] Implement graceful FFmpeg stop.
-- [ ] Add bounded shutdown timeout.
-- [ ] Add forced termination only as last-resort cleanup.
-- [ ] Capture exit code.
-- [ ] Capture diagnostic stderr.
-- [ ] Prevent multiple simultaneous recorder processes.
-- [ ] Detect unexpected FFmpeg death.
-- [ ] Expose typed process status to application layer.
-- [ ] Add process-controller tests with fake subprocesses.
+- [x] Implement recorder process start.
+- [x] Detect immediate FFmpeg startup failure.
+- [x] Implement graceful FFmpeg stop.
+- [x] Add bounded shutdown timeout.
+- [x] Add forced termination only as last-resort cleanup.
+- [x] Capture exit code.
+- [x] Capture diagnostic stderr.
+- [x] Prevent multiple simultaneous recorder processes.
+- [x] Detect unexpected FFmpeg death.
+- [x] Expose typed process status to application layer.
+- [x] Add process-controller tests with fake subprocesses.
 
 ## Exit criteria
 
-- [ ] Recorder can start and stop repeatedly.
-- [ ] MP4 segment metadata is finalized on normal stop.
-- [ ] Unexpected exits are surfaced to the application state machine.
+- [x] Recorder can start and stop repeatedly.
+- [x] MP4 segment metadata is finalized on normal stop.
+- [x] Unexpected exits are surfaced to the application state machine.
 
 # Phase 4 — Recording Session + CUT / Resume
 
