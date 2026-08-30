@@ -298,32 +298,32 @@ Build the intentionally simple interface defined in the PRD.
 
 ## Tasks
 
-- [ ] Create one main Tkinter window.
-- [ ] Add centered preview region.
-- [ ] Add 720p selector.
-- [ ] Add 1080p selector.
-- [ ] Add 30 FPS selector.
-- [ ] Add 60 FPS selector.
-- [ ] Add output-folder field.
-- [ ] Add Browse button.
-- [ ] Add primary action button.
-- [ ] Add Stop Recording button.
-- [ ] Add small status area.
-- [ ] Wire UI entirely through application state.
-- [ ] Show `Start Recording` in IDLE.
-- [ ] Show `CUT` in RECORDING.
-- [ ] Show `Resume` in PAUSED.
-- [ ] Disable Stop in IDLE.
-- [ ] Enable Stop in RECORDING.
-- [ ] Enable Stop in PAUSED.
-- [ ] Disable controls during FINALIZING.
-- [ ] Add minimized-window detection.
-- [ ] Keep UI responsive while FFmpeg operations execute.
-- [ ] Prevent blocking subprocess waits on the Tkinter main thread.
+- [x] Create one main Tkinter window.
+- [x] Add centered preview region.
+- [x] Add 720p selector.
+- [x] Add 1080p selector.
+- [x] Add 30 FPS selector.
+- [x] Add 60 FPS selector.
+- [x] Add output-folder field.
+- [x] Add Browse button.
+- [x] Add primary action button.
+- [x] Add Stop Recording button.
+- [x] Add small status area.
+- [x] Wire UI entirely through application state.
+- [x] Show `Start Recording` in IDLE.
+- [x] Show `CUT` in RECORDING.
+- [x] Show `Resume` in PAUSED.
+- [x] Disable Stop in IDLE.
+- [x] Enable Stop in RECORDING.
+- [x] Enable Stop in PAUSED.
+- [x] Disable controls during FINALIZING.
+- [x] Add minimized-window detection.
+- [x] Keep UI responsive while FFmpeg operations execute.
+- [x] Prevent blocking subprocess waits on the Tkinter main thread.
 
 ## Exit criteria
 
-The complete MVP workflow can be performed without using a terminal.
+- [x] The complete MVP workflow can be performed without using a terminal.
 
 # Phase 9 — Shutdown and Recovery
 

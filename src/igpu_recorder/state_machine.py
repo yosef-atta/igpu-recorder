@@ -13,7 +13,7 @@ import enum
 import threading
 from dataclasses import dataclass
 from pathlib import Path
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING
 
 from igpu_recorder.exceptions import (
     FinalizationError,
@@ -27,6 +27,8 @@ from igpu_recorder.logging import get_logger
 from igpu_recorder.session import RecordingSession
 
 if TYPE_CHECKING:
+    from collections.abc import Callable
+
     from igpu_recorder.session import SegmentInfo
 
 logger = get_logger("state_machine")
@@ -203,7 +205,9 @@ class ApplicationStateMachine:
             new_out = Path(output_dir) if output_dir is not None else self._settings.output_dir
             new_disp = display_index if display_index is not None else self._settings.display_index
             new_mouse = draw_mouse if draw_mouse is not None else self._settings.draw_mouse
-            new_qual = global_quality if global_quality is not None else self._settings.global_quality
+            new_qual = (
+                global_quality if global_quality is not None else self._settings.global_quality
+            )
 
             self._settings = SettingsState(
                 resolution=new_res,
@@ -275,7 +279,8 @@ class ApplicationStateMachine:
             try:
                 out_dir.mkdir(parents=True, exist_ok=True)
             except OSError as exc:
-                raise InvalidConfigurationError(f"Cannot create output directory {out_dir}: {exc}") from exc
+                msg = f"Cannot create output directory {out_dir}: {exc}"
+                raise InvalidConfigurationError(msg) from exc
 
         if not out_dir.is_dir():
             raise InvalidConfigurationError(f"Output path is not a directory: {out_dir}")
@@ -284,7 +289,8 @@ class ApplicationStateMachine:
             caps = probe_capabilities()
             if not caps.is_recording_supported:
                 raise RecordingProcessError(
-                    "System is not ready for hardware recording: missing ddagrab or supported backend."
+                    "System is not ready for hardware recording: "
+                    "missing ddagrab or supported backend."
                 )
             self._ffmpeg_path = caps.ffmpeg_path
             self._ffprobe_path = caps.ffprobe_path

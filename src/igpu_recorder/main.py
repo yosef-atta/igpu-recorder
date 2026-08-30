@@ -32,8 +32,15 @@ def entrypoint(args: Sequence[str] | None = None) -> int:
             print(f"{APP_NAME} v{__version__}")
             return 0
 
-        # Placeholder for main UI / application state initialization in later phases
-        logger.info("Foundation initialized successfully.")
+        if args and "--no-ui" in args:
+            logger.info("Running in headless/no-ui mode.")
+            return 0
+
+        logger.info("Launching iGPU Recorder UI...")
+        from igpu_recorder.ui import MainWindow
+
+        app = MainWindow()
+        app.run()
         return 0
 
     except PlatformNotSupportedError as exc:

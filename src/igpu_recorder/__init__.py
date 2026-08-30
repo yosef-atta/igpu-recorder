@@ -17,6 +17,7 @@ from igpu_recorder.state_machine import (
     SettingsState,
     UIControlsState,
 )
+from igpu_recorder.ui import MainWindow, bgra_to_ppm
 from igpu_recorder.version import __version__
 
 __all__ = [
@@ -26,6 +27,7 @@ __all__ = [
     "FinalizationResult",
     "Finalizer",
     "GDIPreviewCapture",
+    "MainWindow",
     "PreviewConfig",
     "PreviewController",
     "PreviewFrame",
@@ -41,6 +43,7 @@ __all__ = [
     "UIControlsState",
     "VideoStreamMetadata",
     "__version__",
+    "bgra_to_ppm",
 ]
 
 
