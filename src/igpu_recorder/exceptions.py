@@ -23,3 +23,7 @@ class FinalizationError(IGpuRecorderError):
 
 class InvalidConfigurationError(IGpuRecorderError):
     """Raised when user-specified or internal settings are invalid."""
+
+
+class InvalidStateTransitionError(IGpuRecorderError):
+    """Raised when an invalid state transition is requested in the state machine."""

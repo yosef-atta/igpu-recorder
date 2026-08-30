@@ -11,9 +11,17 @@ from igpu_recorder.preview import (
 )
 from igpu_recorder.process_controller import ProcessController, ProcessState, ProcessStatus
 from igpu_recorder.session import RecordingSession, SegmentInfo, SessionSnapshot, SessionState
+from igpu_recorder.state_machine import (
+    ApplicationState,
+    ApplicationStateMachine,
+    SettingsState,
+    UIControlsState,
+)
 from igpu_recorder.version import __version__
 
 __all__ = [
+    "ApplicationState",
+    "ApplicationStateMachine",
     "BasePreviewCapture",
     "FinalizationResult",
     "Finalizer",
@@ -29,6 +37,8 @@ __all__ = [
     "SegmentInfo",
     "SessionSnapshot",
     "SessionState",
+    "SettingsState",
+    "UIControlsState",
     "VideoStreamMetadata",
     "__version__",
 ]
