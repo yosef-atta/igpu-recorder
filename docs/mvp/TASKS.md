@@ -160,22 +160,22 @@ Implement one logical recording composed of multiple hardware-encoded segments.
 
 ## Tasks
 
-- [ ] Define `RecordingSession`.
-- [ ] Generate unique session ID.
-- [ ] Create private temporary session directory.
-- [ ] Snapshot immutable settings at Start.
-- [ ] Generate deterministic segment names.
-- [ ] Implement segment `000`.
-- [ ] Implement CUT.
-- [ ] Gracefully finalize segment during CUT.
-- [ ] Reject empty/invalid completed segments.
-- [ ] Implement Resume.
-- [ ] Increment segment index on Resume.
-- [ ] Ensure resumed segments use identical encoding settings.
-- [ ] Support repeated CUT/Resume cycles.
-- [ ] Implement Stop from RECORDING.
-- [ ] Implement Stop from PAUSED.
-- [ ] Preserve completed segments after unexpected failure where possible.
+- [x] Define `RecordingSession`.
+- [x] Generate unique session ID.
+- [x] Create private temporary session directory.
+- [x] Snapshot immutable settings at Start.
+- [x] Generate deterministic segment names.
+- [x] Implement segment `000`.
+- [x] Implement CUT.
+- [x] Gracefully finalize segment during CUT.
+- [x] Reject empty/invalid completed segments.
+- [x] Implement Resume.
+- [x] Increment segment index on Resume.
+- [x] Ensure resumed segments use identical encoding settings.
+- [x] Support repeated CUT/Resume cycles.
+- [x] Implement Stop from RECORDING.
+- [x] Implement Stop from PAUSED.
+- [x] Preserve completed segments after unexpected failure where possible.
 
 ## Exit criteria
 
