@@ -272,19 +272,19 @@ ERROR
 
 ## Tasks
 
-- [ ] Implement explicit state enum.
-- [ ] Implement valid state transitions.
-- [ ] Reject invalid transitions.
-- [ ] Centralize state mutations.
-- [ ] Lock settings outside IDLE.
-- [ ] Support Start from IDLE.
-- [ ] Support CUT from RECORDING.
-- [ ] Support Resume from PAUSED.
-- [ ] Support Stop from RECORDING.
-- [ ] Support Stop from PAUSED.
-- [ ] Support finalization success to IDLE.
-- [ ] Support recoverable ERROR to IDLE.
-- [ ] Add state-machine unit tests.
+- [x] Implement explicit state enum.
+- [x] Implement valid state transitions.
+- [x] Reject invalid transitions.
+- [x] Centralize state mutations.
+- [x] Lock settings outside IDLE.
+- [x] Support Start from IDLE.
+- [x] Support CUT from RECORDING.
+- [x] Support Resume from PAUSED.
+- [x] Support Stop from RECORDING.
+- [x] Support Stop from PAUSED.
+- [x] Support finalization success to IDLE.
+- [x] Support recoverable ERROR to IDLE.
+- [x] Add state-machine unit tests.
 
 ## Exit criteria
 
