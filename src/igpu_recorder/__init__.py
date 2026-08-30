@@ -1,3 +1,11 @@
 """iGPU Recorder package."""
 
-__version__ = "0.1.0"
+from igpu_recorder.process_controller import ProcessController, ProcessState, ProcessStatus
+from igpu_recorder.version import __version__
+
+__all__ = [
+    "ProcessController",
+    "ProcessState",
+    "ProcessStatus",
+    "__version__",
+]
