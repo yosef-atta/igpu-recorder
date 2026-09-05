@@ -521,21 +521,33 @@ class MainWindow:
         self._is_closing = True
         logger.info("MainWindow closing requested...")
 
+        # If recording or paused, gracefully stop and finalize before closing
+        state = self._state_machine.state
+        if state in (ApplicationState.RECORDING, ApplicationState.PAUSED):
+            self._status_label.config(text="Finalizing before exit...")
+            self._primary_button.config(state=tk.DISABLED)
+            self._stop_button.config(state=tk.DISABLED)
+            
+            def _stop_and_close():
+                try:
+                    self._state_machine.stop()
+                except Exception as exc:
+                    logger.warning("Error stopping session on window close: %s", exc)
+                finally:
+                    self._root.after(0, self._perform_destroy)
+            
+            self._run_async(_stop_and_close)
+            return
+
+        self._perform_destroy()
+
+    def _perform_destroy(self) -> None:
+        """Clean up resources and destroy the window."""
         # Stop preview controller worker thread
         try:
             self._preview_controller.stop()
         except Exception as exc:
             logger.warning("Error stopping preview controller on window close: %s", exc)
-
-        # If recording or paused, abort/cleanup active session
-        try:
-            if self._state_machine.state in (
-                ApplicationState.RECORDING,
-                ApplicationState.PAUSED,
-            ) and self._state_machine.active_session:
-                self._state_machine.active_session.stop()
-        except Exception as exc:
-            logger.warning("Error stopping active session on window close: %s", exc)
 
         # Unregister listeners
         with contextlib.suppress(Exception):

@@ -167,6 +167,23 @@ class RecordingSession:
             self._fps.value,
             self._backend.value,
         )
+        self._write_metadata()
+
+    def _write_metadata(self) -> None:
+        """Write session state to disk for headless recovery."""
+        metadata = {
+            "session_id": self._session_id,
+            "resolution": self._resolution.value,
+            "fps": self._fps.value,
+            "backend": self._backend.value,
+            "output_target": str(self._output_target),
+        }
+        try:
+            with open(self._temp_dir / "session_metadata.json", "w", encoding="utf-8") as f:
+                import json
+                json.dump(metadata, f, indent=2)
+        except Exception as exc:
+            logger.warning("Failed to write session metadata: %s", exc)
 
     @property
     def session_id(self) -> str:
