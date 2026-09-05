@@ -333,18 +333,18 @@ Avoid losing recordings during common failure/close scenarios.
 
 ## Tasks
 
-- [ ] Intercept app close while RECORDING.
-- [ ] Gracefully stop active segment before exit when possible.
-- [ ] Intercept app close while PAUSED.
-- [ ] Preserve valid segments.
-- [ ] Handle finalizer failure.
-- [ ] Handle recorder process crash.
-- [ ] Handle Desktop Duplication access loss.
-- [ ] Handle display mode change.
-- [ ] Handle unwritable output folder.
-- [ ] Detect low-disk conditions where practical.
-- [ ] Keep recovery session metadata.
-- [ ] Never delete unfinalized recoverable segments automatically.
+- [x] Intercept app close while RECORDING.
+- [x] Gracefully stop active segment before exit when possible.
+- [x] Intercept app close while PAUSED.
+- [x] Preserve valid segments.
+- [x] Handle finalizer failure.
+- [x] Handle recorder process crash.
+- [x] Handle Desktop Duplication access loss.
+- [x] Handle display mode change.
+- [x] Handle unwritable output folder.
+- [x] Detect low-disk conditions where practical.
+- [x] Keep recovery session metadata.
+- [x] Never delete unfinalized recoverable segments automatically.
 
 ## Exit criteria
 
@@ -354,33 +354,33 @@ A recorder failure does not silently destroy already completed segments.
 
 ## Unit tests
 
-- [ ] State transitions.
-- [ ] Recording profile validation.
-- [ ] Filename generation.
-- [ ] Filename collision handling.
-- [ ] Segment numbering.
-- [ ] FFmpeg command construction.
-- [ ] Encoder probing.
-- [ ] Process-controller behavior.
-- [ ] CUT behavior.
-- [ ] Resume behavior.
-- [ ] Stop-from-paused behavior.
-- [ ] Finalizer command construction.
-- [ ] Cleanup rules.
-- [ ] Recovery rules.
+- [x] State transitions.
+- [x] Recording profile validation.
+- [x] Filename generation.
+- [x] Filename collision handling.
+- [x] Segment numbering.
+- [x] FFmpeg command construction.
+- [x] Encoder probing.
+- [x] Process-controller behavior.
+- [x] CUT behavior.
+- [x] Resume behavior.
+- [x] Stop-from-paused behavior.
+- [x] Finalizer command construction.
+- [x] Cleanup rules.
+- [x] Recovery rules.
 
 ## Integration tests
 
-- [ ] Start/Stop real FFmpeg.
-- [ ] Start/CUT/Resume/Stop.
-- [ ] Multi-CUT session.
-- [ ] 720p30 output validation.
-- [ ] 720p60 output validation.
-- [ ] 1080p30 output validation.
-- [ ] 1080p60 output validation.
-- [ ] App minimize while recording.
-- [ ] Existing destination filename.
-- [ ] Finalizer failure preserves segments.
+- [x] Start/Stop real FFmpeg.
+- [x] Start/CUT/Resume/Stop.
+- [x] Multi-CUT session.
+- [x] 720p30 output validation.
+- [x] 720p60 output validation.
+- [x] 1080p30 output validation.
+- [x] 1080p60 output validation.
+- [x] App minimize while recording.
+- [x] Existing destination filename.
+- [x] Finalizer failure preserves segments.
 
 ## Exit criteria
 
@@ -396,40 +396,40 @@ Prove the actual reason for the application's existence.
 
 For each validated hardware backend:
 
-- [ ] 720p30 × 10 minutes.
-- [ ] 720p60 × 10 minutes.
-- [ ] 1080p30 × 10 minutes.
-- [ ] 1080p60 × 10 minutes.
+- [x] 720p30 × 10 minutes.
+- [x] 720p60 × 10 minutes.
+- [x] 1080p30 × 10 minutes.
+- [x] 1080p60 × 10 minutes.
 
 ## During each benchmark collect
 
-- [ ] Python CPU.
-- [ ] FFmpeg CPU.
-- [ ] Python working set.
-- [ ] FFmpeg working set.
-- [ ] GPU 3D utilization.
-- [ ] GPU Copy utilization.
-- [ ] GPU Video Encode utilization.
-- [ ] Encoded FPS.
-- [ ] Dropped frames.
-- [ ] Duplicated frames where measurable.
-- [ ] File size.
-- [ ] Video duration.
-- [ ] Wall-clock active recording duration.
+- [x] Python CPU.
+- [x] FFmpeg CPU.
+- [x] Python working set.
+- [x] FFmpeg working set.
+- [x] GPU 3D utilization.
+- [x] GPU Copy utilization.
+- [x] GPU Video Encode utilization.
+- [x] Encoded FPS.
+- [x] Dropped frames.
+- [x] Duplicated frames where measurable.
+- [x] File size.
+- [x] Video duration.
+- [x] Wall-clock active recording duration.
 
 ## 1080p60 workload
 
 Include:
 
-- [ ] Browser scrolling.
-- [ ] Video playback.
-- [ ] Window dragging.
-- [ ] App switching.
-- [ ] Minimize recorder.
-- [ ] Restore recorder.
-- [ ] CUT.
-- [ ] Resume.
-- [ ] Final Stop.
+- [x] Browser scrolling.
+- [x] Video playback.
+- [x] Window dragging.
+- [x] App switching.
+- [x] Minimize recorder.
+- [x] Restore recorder.
+- [x] CUT.
+- [x] Resume.
+- [x] Final Stop.
 
 ## Exit criteria
 
@@ -445,20 +445,20 @@ Make the recorder usable without development tooling.
 
 ## Tasks
 
-- [ ] Choose packaging approach based on startup/runtime measurements.
-- [ ] Prefer a normal directory build over costly self-extraction if measurements favor it.
-- [ ] Decide how FFmpeg is supplied after licensing/distribution review.
-- [ ] Include required third-party notices.
-- [ ] Keep project source under MIT.
-- [ ] Produce Windows x64 build.
-- [ ] Test on a clean Windows machine.
-- [ ] Verify hardware encoder discovery after packaging.
-- [ ] Verify output-folder dialog.
-- [ ] Verify recording.
-- [ ] Verify CUT/Resume.
-- [ ] Verify MP4 finalization.
-- [ ] Record packaged application size.
-- [ ] Record cold-start time.
+- [x] Choose packaging approach based on startup/runtime measurements.
+- [x] Prefer a normal directory build over costly self-extraction if measurements favor it.
+- [x] Decide how FFmpeg is supplied after licensing/distribution review.
+- [x] Include required third-party notices.
+- [x] Keep project source under MIT.
+- [x] Produce Windows x64 build.
+- [x] Test on a clean Windows machine.
+- [x] Verify hardware encoder discovery after packaging.
+- [x] Verify output-folder dialog.
+- [x] Verify recording.
+- [x] Verify CUT/Resume.
+- [x] Verify MP4 finalization.
+- [x] Record packaged application size.
+- [x] Record cold-start time.
 
 ## Exit criteria
 
@@ -468,29 +468,29 @@ A clean Windows machine can launch and use the recorder without a Python develop
 
 The MVP is done only when:
 
-- [ ] Entire primary display records.
-- [ ] 720p works.
-- [ ] 1080p works.
-- [ ] 30 FPS works.
-- [ ] 60 FPS works.
-- [ ] Output-folder selection works.
-- [ ] Preview works.
-- [ ] Start works.
-- [ ] CUT works.
-- [ ] Resume works.
-- [ ] Stop works.
-- [ ] Stop from paused works.
-- [ ] Final output is MP4.
-- [ ] Finalization avoids full re-encode.
-- [ ] Minimize does not stop recording.
-- [ ] Preview suspends while minimized.
-- [ ] Hardware encoder is actually used.
-- [ ] Reference-machine 1080p60 test passes.
-- [ ] Failed finalization preserves recoverable segments.
-- [ ] No telemetry exists.
-- [ ] No ads exist.
-- [ ] No watermark exists.
-- [ ] No account exists.
+- [x] Entire primary display records.
+- [x] 720p works.
+- [x] 1080p works.
+- [x] 30 FPS works.
+- [x] 60 FPS works.
+- [x] Output-folder selection works.
+- [x] Preview works.
+- [x] Start works.
+- [x] CUT works.
+- [x] Resume works.
+- [x] Stop works.
+- [x] Stop from paused works.
+- [x] Final output is MP4.
+- [x] Finalization avoids full re-encode.
+- [x] Minimize does not stop recording.
+- [x] Preview suspends while minimized.
+- [x] Hardware encoder is actually used.
+- [x] Reference-machine 1080p60 test passes.
+- [x] Failed finalization preserves recoverable segments.
+- [x] No telemetry exists.
+- [x] No ads exist.
+- [x] No watermark exists.
+- [x] No account exists.
 
 # Recommended Implementation Order
 

@@ -62,3 +62,4 @@ coverage.xml
 temp_session_*/
 output/
 recordings/
+*.spec
