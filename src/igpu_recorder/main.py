@@ -32,6 +32,17 @@ def entrypoint(args: Sequence[str] | None = None) -> int:
             print(f"{APP_NAME} v{__version__}")
             return 0
 
+        # Attempt recovery of unfinalized sessions
+        from igpu_recorder.recovery import attempt_headless_recovery
+        from igpu_recorder.ffmpeg import probe_capabilities
+        
+        try:
+            caps = probe_capabilities()
+            if caps.ffmpeg_path and caps.ffprobe_path:
+                attempt_headless_recovery(caps.ffmpeg_path, caps.ffprobe_path)
+        except Exception as exc:
+            logger.error("Headless recovery failed: %s", exc)
+
         if args and "--no-ui" in args:
             logger.info("Running in headless/no-ui mode.")
             return 0
